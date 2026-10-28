@@ -14,3 +14,12 @@ b) O servidor deve escutar em uma porta específica (ex: 8000). Quando recebe um
 # Detalhes de Execução
 
 Para visualização da dinâmica cliente/servidor com os sockets é necessário executar primeiro os arquivos de servidor e somente depois executar os arquivos de cliente (que deve ser executado em terminal separado)
+
+Arquivos de código para cada questão:
+
+1)  a) **cliente_a** e **servidor_a**
+    b) **cliente_b** e **servidor_b**
+
+2) **cliente_rpc** e **servidor_rpc**
+
+3) **cliente_chat** e **servidor_chat**
