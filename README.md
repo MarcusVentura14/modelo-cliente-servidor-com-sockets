@@ -8,6 +8,8 @@ b) O servidor deve escutar em uma porta específica (ex: 8000). Quando recebe um
 
 2) Implementar em Python o modelo cliente/servidor com RPyC (Remote Python Call). O servidor deve atender um único pedido do cliente: Retornar o horário do momento solicitado. O cliente deve solicitar o horário ao servidor e encerrar.
 
+3) Desenvolver uma aplicação de chat em tempo real utilizando a arquitetura Cliente-Servidor, explorando a comunicação entre processos via sockets e o tratamento de concorrência por meio de threads.
+
 
 # Detalhes de Execução
 
