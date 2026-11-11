@@ -16,6 +16,19 @@ a) Worker (Cliente que envia sinais): Um script que roda em loop enviando a cada
 
 b) Servidor Monitor: Mantém um registro do último instante em que recebeu o sinal de cada Worker.Possui uma thread de checagem que roda periodicamente. Se um Worker ficar mais de 8 segundos sem enviar o sinal de Heartbeat, o servidor deve exibir no terminal: [ALERTA] O Nó Worker_X está OFFLINE!.
 
+5) Desenvolver uma aplicação que utilize o conceito de estado compartilhado. A aplicação pode ser um sistema de reserva de assentos (ex: restaurante, cinema, ônibus, avião, etc).
+
+**Servidor (RPyC):**
+- Deve manter uma estrutura de dados na memória (ex: um dicionário ou lista) representando os assentos disponíveis (ex: de A1 a A10).
+- Métodos expostos (*exposed_*):
+- *exposed_listar_assentos()*: Retorna o status atual de cada assento (Livre / Reservado).
+- *exposed_reservar_assento(nome_cliente, assento)*: Tenta reservar o assento desejado.
+- **Controle de Concorrência**: Garantir que se dois clientes tentarem reservar o mesmo assento simultaneamente, apenas um receba a confirmação de sucesso e o outro receba um aviso de "Assento já ocupado".
+**Cliente (RPyC):**
+- Comando simples que se conecta ao servidor RPyC.
+- Permite visualizar o mapa de assentos e enviar solicitações de reserva repetidas até o usuário decidir sair.
+
+
 # Detalhes de Execução
 
 Para visualização da dinâmica cliente/servidor com os sockets é necessário executar primeiro os arquivos de servidor e somente depois executar os arquivos de cliente (que deve ser executado em terminal separado)
@@ -24,7 +37,8 @@ Arquivos de código para cada questão:
 
 1) 
 
-a) **cliente_a** e **servidor_a**
+a) **cliente_a** e **servidor_a** 
+
 b) **cliente_b** e **servidor_b**
 
 2) **cliente_rpc** e **servidor_rpc**
@@ -32,3 +46,5 @@ b) **cliente_b** e **servidor_b**
 3) **cliente_chat** e **servidor_chat**
 
 4) **cliente_heartbeat** e **servidor_heartbeat**
+
+5) **cliente_rpyc** e **servidor_rpyc**
