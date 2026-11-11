@@ -24,6 +24,7 @@ b) Servidor Monitor: Mantém um registro do último instante em que recebeu o si
 - *exposed_listar_assentos()*: Retorna o status atual de cada assento (Livre / Reservado).
 - *exposed_reservar_assento(nome_cliente, assento)*: Tenta reservar o assento desejado.
 - **Controle de Concorrência**: Garantir que se dois clientes tentarem reservar o mesmo assento simultaneamente, apenas um receba a confirmação de sucesso e o outro receba um aviso de "Assento já ocupado".
+
 **Cliente (RPyC):**
 - Comando simples que se conecta ao servidor RPyC.
 - Permite visualizar o mapa de assentos e enviar solicitações de reserva repetidas até o usuário decidir sair.
